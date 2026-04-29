@@ -52,4 +52,20 @@ public class Character : MonoBehaviour
         transform.rotation = endRotation;
         isRotating = false;
     }
+
+    private void OnTriggerEnter(Collider collid)
+    {
+        if (collid.gameObject.CompareTag("Fruit"))
+        {
+            Destroy(collid.gameObject);
+        }
+    }
+
+    private void OnCollisionEnter(Collision coll)
+    {
+        if (coll.gameObject.CompareTag("Walls"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
