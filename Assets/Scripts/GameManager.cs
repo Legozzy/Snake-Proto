@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,5 +13,15 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void LoadLevel()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(1);
     }
 }

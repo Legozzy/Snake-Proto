@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class Body_And_Tail : MonoBehaviour
 {
-    public GameObject head;
-    public float dist;
-    public float followSpeed = 1f;
+    public int index;
+    public Head head;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,11 +14,9 @@ public class Body_And_Tail : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dist = Vector3.Distance(transform.position, head.transform.position);
-        if (dist > 0.15f)
+        if (head.positionHistory.Count > index)
         {
-            transform.position = Vector3.MoveTowards(transform.position, head.transform.position, followSpeed * Time.deltaTime);
-        }
-        
+            transform.position = head.positionHistory[index];
+        }   
     }
 }

@@ -13,12 +13,4 @@ public class Fruit : MonoBehaviour
     {
         
     }
-
-    //private void OnCollisionEnter(Collision coll)
-    //{
-    //    if (coll.gameObject.CompareTag("Snake"))
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
 }
